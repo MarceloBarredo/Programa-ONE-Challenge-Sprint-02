@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Juego del Ahorcado</title>
+        <link rel="stylesheet" href="CSS/reset.css">
+        <link rel="stylesheet" href="CSS/style.css">
+	</head>
+
+    <body>
+        <header class="header-juego">
+            <h1>Juego del Ahorcado</h1>
+        </header>
+        <main>
+            <section class="contenedor1">
+                <canvas id="lienzo" width="350" height="400"></canvas>
+            </section>
+            
+            <section class="contenedor2">
+                <div id="div-palabras-aleatorias">
+                    <span id="contador-vidas">¡Te quedan <span id="vidas"></span> vidas!</span>
+                    <ul id="espacios-caracteres"></ul>
+                    <ul id="espacio-guiones"></ul>
+                </div>
+                
+                <div id="div-botones">
+                    <div id="div-2-botones">
+                        <button id="comenzar-juego">Comenzar</button>
+                        <button id="btn-agregar-palabra" onclick ="agregarPalabra()">Agregar Palabra</button>
+                    </div>
+                    <div id="div-invisible">
+                        <ul id="mensajes-errores"></ul>
+                        <textarea id="input-agregar-palabra" placeholder="Ingrese la palabra nueva"></textarea>
+                        <button id="btn-añadir-palabra">Añadir</button>
+                    </div>
+                    <div id="div-letras-utilizadas">
+                        <span id="span-utilizadas">Letras Utilizadas</span>
+                        <ul id="letras-utilizadas"></ul>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            Diseñado por Marcelo Barredo para el Programa ONE - Oracle Next Education 2022
+        </footer>
+    </body>
+    
+    <script src="JavaScript/app.js"></script>
+    <script src="JavaScript/canvas.js"></script>
+    <script src="JavaScript/validacion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JavaScript/sweetAlert.js"></script>
+
+</html>

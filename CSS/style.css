@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Patrick+Hand&display=swap');
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url(../imagenes/fondo.jpg); /* Ubicación de la imagen */
+    background-repeat: no-repeat; /* Para que la imagen de fondo no se repita */
+    background-position: center center; /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
+    background-attachment: fixed; /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+    background-size: cover; /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    background-color: rgb(174, 243, 255); /* Se muestra un color de fondo mientras se está cargando la imagen de fondo o si hay problemas para cargarla */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Patrick Hand', cursive;
+}
+
+main {
+    width: 100%;
+    height: 80%;
+    display: flex;
+}
+
+/* Estilo Pagina 1 */
+
+.titulo-inicio {
+    position: absolute;
+    margin-top: -400px;
+    color: #81d0c2;
+    text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+    font-size: 4rem;
+    letter-spacing: 10px;
+    background-color: #0c1421;
+    padding: 1rem;
+    opacity: 0.85;
+    text-align: center;
+}
+
+.div-pag-inicio {
+    display: flex;
+    align-items: center;
+}
+
+.boton-inicio {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%; /* El boton tendra forma de circulo */
+    background-color: #81d0c2;
+    font-size: 20px;
+    border: 5px double #0c1421
+}
+
+.boton-inicio:hover {
+    cursor: pointer;
+    background-color: orange;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #81d0c2;
+    color: black;
+    margin-bottom: 15px;
+    text-align: center;
+    height: 50px;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+/* Estilo Pagina 2 */
+
+.header-juego {
+    color: #81d0c2;
+    text-shadow: 2px 2px 0 black, 2px -2px 0 black, -2px 2px 0 black, -2px -2px 0 black, 2px 0px 0 black, 0px 2px 0 black, -2px 0px 0 black, 0px -2px 0 black;
+    font-size: calc(1rem + 4vw);
+    letter-spacing: 10px;
+    background-color: #0c1421;
+    padding: 1rem;
+    opacity: 0.85;
+}
+
+/* CONTENEDOR 1 */
+.contenedor1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lienzo {
+    background-color: #81d0c2;
+    opacity: 0.7;
+    border-radius: 20px;
+}
+
+/* CONTENEDOR 2 */
+.contenedor2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#div-palabras-aleatorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#div-palabras-aleatorias li {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 15px;
+    font-size: 55px;
+    color: #81d0c2;
+}
+
+#contador-vidas {
+    visibility: hidden;
+    color: #81d0c2;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#espacios-caracteres {
+    display: flex;
+    flex-direction: row;
+}
+
+#espacios-caracteres li {
+    visibility: hidden;
+}
+
+#espacio-guiones {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -20px
+}
+
+#div-botones {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#div-2-botones {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#div-invisible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mensajes-errores {
+    color: red;
+    font-size: 1.5rem;
+    margin: 10px 0 10px 0;
+}
+
+#input-agregar-palabra {
+    width: 200px;
+    height: 30px;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#btn-añadir-palabra {
+    display: none;
+}
+
+#div-letras-utilizadas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#letras-utilizadas {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 15px;
+    font-size: 55px;
+    color: #81d0c2;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+#span-utilizadas {
+    visibility: hidden;
+    color: #81d0c2;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+/* BOTONES */
+
+button {
+    width: 200px;
+    height: 50px;
+    background-color: #81d0c2;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+/* SITIO RESPONSIVE */
+
+/* Para Tablet */
+@media screen and (max-width: 820px) {
+    body {
+        justify-content: normal;
+    }
+    
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-juego {
+        font-size: 2rem;
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    .contenedor1 {
+        width: 70%;
+    }
+
+    .contenedor2 {
+        width: 100%;
+    }
+
+    #mensajes-errores {
+        font-size: 1rem;
+    }
+    
+    #div-palabras-aleatorias li {
+        letter-spacing: 0.5px;
+        font-size: 2rem;
+    }
+
+    #div-letras-utilizadas li {
+        letter-spacing: 0.5px;
+        font-size: 2rem;
+    }
+
+    #lienzo {
+        width: 250px;
+    }
+
+    #contador-vidas {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    #span-utilizadas {
+        margin-top: 2px;
+        font-size: 1rem;
+    }
+
+    button {
+        width: 175px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 0.8rem;
+        height: max-content;
+    }
+}
+
+/* Para Telefono */
+@media screen and (max-width: 412px) {
+    body {
+        justify-content: normal;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-juego {
+        font-size: 2rem;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .contenedor1 {
+        width: 70%;
+    }
+
+    #lienzo {
+        width: 200px;
+    }
+
+    .contenedor2 {
+        width: 100%;
+    }
+
+    #input-agregar-palabra {
+        margin-bottom: 0.5rem;
+        width: 175px;
+        font-size: 10px;
+        height: 20px;
+    }
+
+    #contador-vidas {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    #div-palabras-aleatorias li {
+        letter-spacing: 0;
+        font-size: 1.5rem;
+    }
+
+    #div-letras-utilizadas li {
+        letter-spacing: 0;
+        font-size: 1.5rem;
+    }
+
+    button {
+        width: 130px;
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    #mensajes-errores {
+        font-size: 0.8rem;
+    }
+
+    #span-utilizadas {
+        margin-top: 2px;
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        height: max-content;
+        padding: 0 11px;
+        box-sizing: border-box;
+    }
+}
+
