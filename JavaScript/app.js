@@ -35,6 +35,7 @@ botonComenzar.addEventListener("click", function () {
     spanVidas.innerHTML = vidas;
     dibujarAhorcado(vidas);
 
+    botonComenzar.innerHTML = "Nuevo Juego";
     document.getElementById("span-utilizadas").style.visibility = "visible";
     document.getElementById("contador-vidas").style.visibility = "visible";
     document.getElementById("input-agregar-palabra").style.display = "none";
