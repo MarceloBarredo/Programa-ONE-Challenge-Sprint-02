@@ -75,6 +75,15 @@ footer {
     font-weight: bold;
 }
 
+#logo-github {
+    margin-left: 2rem;
+}
+
+.link-redes {
+    width: 4rem;
+    margin-left: 1rem;
+}
+
 /* DISEÑO RESPONSIVE PARA TABLET */
 @media screen and (max-width: 820px) {
     footer {
